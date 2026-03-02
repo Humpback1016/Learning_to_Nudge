@@ -1,6 +1,6 @@
 # Learning to Nudge
 
-Code for learning Neural Control Barrier Functions (NCBF) for safe robot manipulation: simulation data collection and training (Isaac Lab), refinement from safe/unsafe sets, real-robot evaluation with Franka + Kinect + AprilTag fusion, and CBF visualization.
+Code for learning Neural Control Barrier Functions (NCBF) for safe robot manipulation. Detailed descriptions are provided below, organized in chronological order.
 
 ---
 
@@ -16,7 +16,7 @@ Code for learning Neural Control Barrier Functions (NCBF) for safe robot manipul
 
 ---
 
-## File index (brief description)
+## File index
 
 ### data_collection/
 
