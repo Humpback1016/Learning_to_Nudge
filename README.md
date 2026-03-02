@@ -55,10 +55,8 @@ Code for learning Neural Control Barrier Functions (NCBF) for safe robot manipul
 
 | File | Description |
 |------|-------------|
-| `franka_send_tf.py` | Publishes Franka end-effector pose as TF from `panda_link0` to `panda_EE` at 100 Hz. Used only for hand–eye calibration. Please refer to the following repository for details:
-https://github.com/Humpback1016/Hand-Eye-Calibration-for-Franka|
+| `franka_send_tf.py` | Publishes Franka end-effector pose as TF from `panda_link0` to `panda_EE` at 100 Hz. Used only for hand–eye calibration. Please refer to the following repository for details:https://github.com/Humpback1016/Hand-Eye-Calibration-for-Franka|
 | `dual_kinect_detector.py` | ROS2 node that detects AprilTags in Kinect RGB stream and publishes tag poses|
 | `dual_fusion.py` | ROS2 node that fuses AprilTag poses from two Kinects and publishes a single unified pose per tag with quality and timeout logic. |
-| `apriltag_detector.py` | Single-camera AprilTag detector: subscribes to one Kinect RGB stream and publishes pose array and TF frames. Used only for hand–eye calibration. Please refer to the following repository for details:
-https://github.com/Humpback1016/Hand-Eye-Calibration-for-Franka|
+| `apriltag_detector.py` | Single-camera AprilTag detector: subscribes to one Kinect RGB stream and publishes pose array and TF frames. Used only for hand–eye calibration. Please refer to the following repository for details:https://github.com/Humpback1016/Hand-Eye-Calibration-for-Franka|
 | `franka_dcbf_ros2_recording_transform.py` | NCBF-guided Franka controller: reads fused AprilTag poses via ROS2, runs NCBF, sends selected motions via Frankx, and records trajectories. |
