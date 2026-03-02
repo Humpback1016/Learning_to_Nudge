@@ -22,8 +22,8 @@ Code for learning Neural Control Barrier Functions (NCBF) for safe robot manipul
 
 | File | Description |
 |------|-------------|
-| `ncbf_manip_dis_random_vel.py` | Isaac Lab auto-exploration script: random-velocity pushing with safety; collects trajectories and saves JSON via `collect_data`. |
-| `collect_data.py` | Helpers to record robot/object states, safety costs, and joint states into trajectories and save to disk; used by the data-collection script. |
+| `ncbf_manip_dis_random_vel.py` | Isaac Lab auto-exploration script to collect both safe and unsafe data. |
+| `collect_data.py` | Helpers to record robot and object states, safety costs, and joint states into trajectories and save to disk; used by the data-collection script. |
 | `data_reformat.py` | Converts trajectory JSON to NCBF training format (sliding-window sequences, tilt filtering) and writes NPZ. |
 
 ### initial_training/
@@ -31,7 +31,7 @@ Code for learning Neural Control Barrier Functions (NCBF) for safe robot manipul
 | File | Description |
 |------|-------------|
 | `training.py` | Loads reformatted NPZ data, normalizes it, trains the NCBF (PyTorch), and saves model and normalizers. |
-| `config.py` | Central config: paths, model/normalizer names, horizon, training hyperparameters, and arm limits. |
+| `config.py` | Central config: paths, model and normalizer names, horizon, training hyperparameters, and arm limits. |
 | `models.py` | Defines PyTorch `NCBF` (LSTM + MLP) and `Normalizer` for object and end-effector state. |
 | `helpers.py` | Provides `normalize_data` and `normalize_state_sequence` for training data normalization. |
 
@@ -39,7 +39,7 @@ Code for learning Neural Control Barrier Functions (NCBF) for safe robot manipul
 
 | File | Description |
 |------|-------------|
-| `get_refined_demonstrations_hz_unsafe_batch_modular.py` | Isaac Lab script: refines the NCBF by iteratively updating the dataset|
+| `get_refined_demonstrations_hz_unsafe_batch_modular.py` | Refines the NCBF by iteratively updating the dataset|
 
 ### evaluation_sim/
 
